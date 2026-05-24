@@ -1,4 +1,4 @@
-import ClosingButton from "@/app/components/closingbutton";
+import ClosingButton from "@/app1/app/components/closingbutton";
 export default async function Close({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params; // ✅ unwrap the Promise
 

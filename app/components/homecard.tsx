@@ -3,7 +3,7 @@ type userschema={
     username:String,
     bloodtype:String,
 }
-export default function Homecard({props}){
+export default function Homecard(props:userschema){
     
     return<>
         <h1>{props.username}</h1>
