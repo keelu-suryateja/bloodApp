@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client"
+  output = "generated"
+}
+
+datasource db {
+  provider = "postgresql"
+
+}
+
+model Post {
+  id          String  @id @default(uuid())
+  requestedBY String  
+  bloodtype   String
+  issolved    Boolean @default(false)
+  phonenumber String
+  donor       String  @default("Anonymous")
+  reciever    String  
+  User        User    @relation(fields: [requestedBY], references: [id])
+  Interaction Interaction[]
+}
+
+model User {
+  id        String  @id @default(uuid())
+  email     String  @unique
+  username  String
+  password  String
+  isactive  Boolean @default(true)
+  bloodtype String
+  Post      Post[]
+  Interactions Interaction[]
+
+}
+
+model Interaction{
+  id String @id @default(uuid())
+  userid String
+  postid String 
+  status String
+  Post Post @relation(fields: [postid],references: [id])
+  User User @relation(fields: [userid],references: [id])
+}
+
+model Otp {
+  id        String   @id @default(uuid())
+  email     String   
+  code      String   
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
