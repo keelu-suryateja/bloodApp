@@ -40,7 +40,7 @@ export const SendUpdate = async (email: { email: string,postId:string }) => {
         <p style="font-size: 12px; color: #555;">This is an automated message. Please do not reply directly to this email.</p>
       <h2>Submit the aceeptence after recieving the blood</h2>
 
-      <a href="http://localhost:3000/confirm/${email.postId}">
+      <a href="https://blood-app-theta.vercel.app/confirm/${email.postId}">
         Click here to confirm if you received blood
       </a>
         </div>
