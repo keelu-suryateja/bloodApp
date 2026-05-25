@@ -1,5 +1,5 @@
 import prisma from "@/db";
-import Navbutton from "./components/button";
+export const dynamic = "force-dynamic";
 import Homebutton from "./components/homebutton";
 
 export default async function Home() {
