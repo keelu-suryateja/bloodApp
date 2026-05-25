@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/db";
 import * as z from "zod";
-import { sendEmail } from "@/app/mail/resend";
+import { sendEmail } from "@/app/mail/nodemailer";
 
 
     export async function POST(req: NextRequest) {

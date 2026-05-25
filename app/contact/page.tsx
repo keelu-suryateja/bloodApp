@@ -3,7 +3,7 @@ import { verify } from "jsonwebtoken"
 import { redirect } from "next/navigation"
 import { cookies } from "next/headers"
 import Topbar from "../components/topbar"
-import { SendUpdate } from "../mail/resend"
+import { SendUpdate } from "../mail/nodemailer"
 export default async function Contactinfo(){
     
     const cookiesStore=cookies()

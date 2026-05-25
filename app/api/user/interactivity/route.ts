@@ -1,4 +1,4 @@
-import { SendUpdate } from "@/app/mail/resend";
+import { SendUpdate } from "@/app/mail/nodemailer";
 import prisma from "@/db";
 import { NextRequest, NextResponse } from "next/server";
 import { email } from "zod";

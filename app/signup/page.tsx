@@ -24,6 +24,7 @@ export default function Home() {
          router.push('/signin');
          return;
       }
+      console.log(email);
       const res = await axios.post("/api/user/otp", { email });
       if (res.data.msg === "OTP stored successfully") {
         toast.success("OTP sent to your email!");
