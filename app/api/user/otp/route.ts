@@ -27,7 +27,7 @@ import { sendEmail } from "@/app/mail/nodemailer";
         expiresAt: new Date(Date.now() + 5 * 60 * 1000), // 5 min expiry
       },
     });
-    sendEmail({"email":email,"otp":otp})
+    await sendEmail({"email":email,"otp":otp})
     return NextResponse.json({ msg: "OTP stored successfully" });
   } catch (err) {
     console.error(err);
