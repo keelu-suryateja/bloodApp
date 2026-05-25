@@ -14,7 +14,10 @@ export default async function Home() {
   });
 
   const averageresponse = await prisma.interaction.count({
-    where: { status: "pending" },
+    where: { 
+      status: "pending" ,
+      
+     },
   });
 
   const finalavg =
