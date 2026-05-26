@@ -11,9 +11,7 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASS,
   },
 });
-// ======================================================
-// PROFESSIONAL OTP EMAIL
-// ======================================================
+
 
 export const sendEmail = async (email: {
   email: string;
@@ -176,9 +174,6 @@ export const sendEmail = async (email: {
   });
 };
 
-// ======================================================
-// PROFESSIONAL DONOR UPDATE EMAIL
-// ======================================================
 
 export const SendUpdate = async (email: {
   email: string;
