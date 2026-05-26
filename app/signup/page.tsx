@@ -71,7 +71,7 @@ export default function Home() {
         <input className={style} onChange={(e)=>setusername(e.target.value)} placeholder="username" />
         <input className={style} onChange={(e)=>setemail(e.target.value)} placeholder="email" />
         <input className={style} onChange={(e)=>setpassword(e.target.value)} placeholder="password" type="password" />
-        <input className={style} onChange={(e)=>setblood(e.target.value)} placeholder="bloodtype" />
+        <input className={style} onChange={(e)=>setblood(e.target.value)} placeholder="bloodtype (B+/AB+)" />
 
         {!showOtp ? (
           <button className="bg-red-500 text-white w-full rounded-xl p-3 mt-4 hover:scale-105" onClick={requestOtp}>
